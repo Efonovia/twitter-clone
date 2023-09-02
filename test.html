@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter Clone</title>
+</head>
+<style>
+* {
+  font-family: Poppins;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+    background-color: black;
+}
+
+main {
+  height: 100vh;
+  width: 40vw;
+  margin: auto;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+}
+
+.display-name {
+    font-weight: 600;
+    color: white;
+}
+
+.username {
+    font-weight: 300;
+    color: gray;
+    font-size: 15px;
+}
+
+.time-sent {
+    font-weight: 300;
+    color: gray;
+    font-size: 15px;
+}
+
+.tweet-text {
+    color: white;
+}
+
+.tweet {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items:start;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.inner-content {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.tweet-info, .reply-info {
+    color: white;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.reply-info {
+    color: gray;
+    user-select: none;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.replying-to {
+    color: blue;
+    cursor: pointer;
+}
+
+.tweet-stats {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    gap: 100px;
+}
+
+.like, .comment, .retweet {
+    display: flex;
+    color: gray;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.like:hover, .fa-heart:hover {
+    color: rgb(251, 0, 42);
+}
+
+.tweet:hover {
+    background-color: rgb(26, 26, 26);
+    cursor: pointer;
+}
+
+
+
+</style>
+<body>
+    <main>
+
+        <div class="tweet">
+            <img height="50" width="50" src="./src/avatars/image-amyrobson.png" alt="" class="pfp">
+            <div class="inner-content">
+                <div class="tweet-info">
+                    <div class="display-name">jane</div>
+                    <div class="username">@janewayne</div>.
+                    <div class="time-sent">44m</div>
+                </div>
+                <div class="reply-info">replying to <span class="replying-to">@messi</span></div>
+                <div class="tweet-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore id ab dolorum reprehenderit pariatur soluta laboriosam libero magni, voluptate, temporibus nesciunt amet incidunt perferendis eligendi optio hic alias aliquam porro.</div>
+                <div class="tweet-stats">
+                    <div class="comment"><i class="fa-regular fa-comment" style="color: #8f8f8f;"></i> <div class="comment-amount">22</div></div>
+                    <div class="retweet"><i class="fa-solid fa-retweet" style="color: #8f8f8f;"></i> <div class="retweet-amount">22</div></div>
+                    <div class="like"><i class="fa-regular fa-heart" style="color: #8f8f8f;"></i> <div class="like-amount">22</div></div>
+                </div>
+            </div>
+        </div>
+        <hr></hr>
+    </main>
+</body>
+<script src="https://kit.fontawesome.com/a5908c70c9.js" crossorigin="anonymous"></script>
+</html>

@@ -1,38 +1,253 @@
-.App {
-  text-align: center;
+* {
+  font-family: Poppins;
+  margin: 0px;
+  padding: 0px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    background-color: black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+main {
+  height: 100vh;
+  width: 500px;
+  margin: auto;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  /* display: flex;
+  justify-content: start;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: column; */
 }
 
-.App-link {
-  color: #61dafb;
+main::-webkit-scrollbar {width: 7px;}
+main::-webkit-scrollbar-track {background: hsla(0, 66%, 66%, 0.219)}
+main::-webkit-scrollbar-thumb {background: hsla(0, 84%, 42%, 0.397);}
+main::-webkit-scrollbar-thumb:hover {background: hsla(0, 84%, 42%, 0.897);}
+
+.main-holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.user-list {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    user-select: none;
+    gap: 10px;
+}
+
+.user-account {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.inner-main-tweet {
+    padding: 20px;
+}
+
+.display-name {
+    font-weight: 600;
+    color: white;
+}
+
+.username {
+    font-weight: 300;
+    color: gray;
+    font-size: 15px;
+}
+
+.time-sent {
+    font-weight: 300;
+    color: gray;
+    font-size: 15px;
+}
+
+.tweet-text {
+    color: white;
+}
+
+
+.tweeter-info {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.tweeter-info > .user {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+}
+
+.tweet-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    gap: 100px;
+    padding: 10px 0;
+}
+
+.main-tweet-like, .main-tweet-comment, .main-tweet-retweet {
+    display: flex;
+    color: gray;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.header {
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row;
+    color: white;
+    font-size: 20px;
+    padding-left: 20px;
+    user-select: none;
+    gap: 20px;
+}
+
+.tweet {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.inner-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.tweet-info, .reply-info {
+    color: white;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.reply-info {
+    color: gray;
+    user-select: none;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.replying-to {
+    color: blue;
+    cursor: pointer;
+}
+
+.tweet-stats {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    gap: 100px;
+}
+
+.like, .comment, .retweet {
+    display: flex;
+    color: gray;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.like:hover, .fa-heart:hover {
+    color: rgb(251, 0, 42);
+}
+
+.tweet:hover, .user-account:hover {
+    background-color: rgb(26, 26, 26);
+    cursor: pointer;
+}
+
+.reply-field {
+    width: 100%;
+    height: 20px;
+    outline: none;
+    font-size: 20px;
+    color: white;
+    background-color: black;
+    border: none;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    line-break: auto;
+    resize: none;
+}
+
+.reply-field::-webkit-scrollbar {width: 7px;}
+.reply-field::-webkit-scrollbar-track {background: hsla(0, 66%, 66%, 0.219)}
+.reply-field::-webkit-scrollbar-thumb {background: hsla(0, 84%, 42%, 0.397);}
+.reply-field::-webkit-scrollbar-thumb:hover {background: hsla(0, 84%, 42%, 0.897);}
+
+hr {
+    border-width: 0.1px;
+}
+
+.reply-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.reply-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    cursor: pointer;
+    width: 80px;
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+}
+
+.reply-field-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.char-limit {
+    color: red;
 }
